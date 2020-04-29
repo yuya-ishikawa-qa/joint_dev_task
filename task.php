@@ -5,6 +5,14 @@ print("#####q1#####".PHP_EOL);
 $names = ["田中", "佐藤", "佐々木", "高橋"];
 
   # 以下に回答を記載
+<?php
+
+$names = ["田中", "佐藤", "佐々木", "高橋"];
+array_push($names,"齊藤");
+print "<pre>";
+print_r($names);
+
+?>
 
 echo PHP_EOL;
 
