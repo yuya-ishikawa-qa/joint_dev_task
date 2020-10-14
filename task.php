@@ -25,18 +25,25 @@ print("#####q3#####".PHP_EOL);
 $numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9];
 
   # 以下に回答を記載
-print_r(array_count_values($numbers));
+  $numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9];
+  foreach($numbers as $aaa){
+    if($aaa === 3){
+        $bbb++;
+    }
+  }
+  echo $bbb. "個". PHP_EOL;
 echo PHP_EOL;
 
 print("#####q4#####".PHP_EOL);
 $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null, "バレー"];
 
   # 以下に回答を記載
-  function valueFilter($n){
-    return($n <> null);
-  }
-  $nn = array_filter($sports,'valueFilter');
-  print_r($nn);
+
+  unset($sports[null]);
+  $sports = array_values($sports);
+  foreach($sports as $g)
+  echo $g;
+
 echo PHP_EOL;
 
 print("#####q5#####".PHP_EOL);
@@ -44,16 +51,11 @@ $array1 = [];
 $array2 = [1, 5, 8, 10];
 
   # 以下に回答を記載
-if(empty($array1)){
-    print_r("aaaaa");
-  }else{
-    print_r("bbbbb");
-  }
-if(empty($array2)){
-    print_r("ccccc");
-  }else{
-    print_r("ddddd");
-  }
+
+
+  var_export(empty($array1));
+
+  var_export(!empty($array２));
 echo PHP_EOL;
 
 print("#####q6#####".PHP_EOL);
@@ -61,19 +63,33 @@ $numbers1 = [1, 2, 3, 4, 5];
 
   # 以下に回答を記載
 
+  $numbers2 = [];
+  foreach($numbers1 as $g){
+    $g *= 10;
+  array_push($numbers2, $g);
+  }
+  print_r($numbers2);
 echo PHP_EOL;
 
 print("#####q7#####".PHP_EOL);
 $array = ["1", "2", "3", "4", "5"];
 
   # 以下に回答を記載
+  $array = array_map('intval', $array);
 
+print_r($array);
 echo PHP_EOL;
 
 print("#####q8#####".PHP_EOL);
 $programming_languages = ["php","ruby","python","javascript"];
 
   # 以下に回答を記載
+  $programming_languages = ["php","ruby","python","javascript"];
+
+  # コードを追加
+  $programming_languages = array_map('ucfirst', $programming_languages);
+  $upper_case_programming_languages = array_map('strtoupper'
+  , $programming_languages);
 
   # 以下は変更しないで下さい
 print_r($programming_languages);
@@ -87,20 +103,47 @@ $names = ["田中", "佐藤", "佐々木", "高橋"];
 
   # 以下に回答を記載
 
+  $g = '会員No.';
+  foreach($names as $kay => $w){
+       $kay++;
+       $a[] = $g. $kay. $w;
+  }
+  print_r($a);
 echo PHP_EOL;
 
 print("#####q10#####".PHP_EOL);
 $foods = ["いか","たこ","うに","しゃけ","うにぎり","うに軍艦","うに丼"];
 
   # 以下に回答を記載
-
+  foreach($foods as $g){
+    if(preg_match('/うに/', $g)){
+      echo '好物です'.PHP_EOL;
+    }else{
+      echo 'まぁまぁ好きです'.PHP_EOL;
+    }
+  }
 echo PHP_EOL;
 
 print("#####q11#####".PHP_EOL);
 $sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]];
 
   # 以下に回答を記載
-
+  $k = [];
+  foreach($sports as $key => $g){
+    if(is_array($g)){
+      $k = array_merge($k, $g);
+      }else{
+      array_push($k, $g);
+    }
+  }
+  $k = array_unique($k);
+  $k = array_values($k);
+  echo "ユーザーの趣味一覧".PHP_EOL;
+  foreach($k as $key => $r){
+    $key++;
+    $k = $y."NO".$key.$r.PHP_EOL;
+    echo $k;
+  }
 echo PHP_EOL;
 
 print("#####q12#####".PHP_EOL);
@@ -220,4 +263,3 @@ foreach($humans as $human){
 }
 
 echo PHP_EOL;
-?>

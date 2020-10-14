@@ -1,3 +1,4 @@
+<?php
 //PHP課題(基礎・応用)の回答例です。
 
 
@@ -253,17 +254,17 @@ print("#####q17#####".PHP_EOL);
 
 class User
 {
-    
+
     protected $name;
     protected $age;
     protected $gender;
-    
+
     function __construct($user_name,$user_age,$user_gender)    {
         $this->name = $user_name;
         $this->age = $user_age;
         $this->gender = $user_gender;
     }
-    
+
     function info() {
         print("名前:".$this->name.PHP_EOL);
         print("年齢:".$this->age.PHP_EOL);
@@ -290,12 +291,12 @@ class Man
 
     protected $name;
     protected $age;
-    
+
     function __construct($user_name,$user_age)    {
         $this->name = $user_name;
         $this->age = $user_age;
     }
-    
+
     function introduce() {
         if($this->age >= 20){
             print("こんにちは,".$this->name."と申します。宜しくお願いいたします。".PHP_EOL);
@@ -345,12 +346,12 @@ class Human
 
     public $name;
     public $age;
-    
+
     function __construct($user_name,$user_age)    {
         $this->name = $user_name;
         $this->age = $user_age;
     }
-    
+
     function introduce() {
         if($this->age >= 20){
             print("こんにちは,".$this->name."と申します。宜しくお願いいたします。".PHP_EOL);
@@ -363,15 +364,15 @@ class Human
 
 class Zoo
 {
-    
+
     protected $name;
     protected $entry_fee;
-    
+
     function __construct($zoo_name,$zoo_entry_fee)    {
         $this->name = $zoo_name;
         $this->entry_fee = $zoo_entry_fee;
     }
-    
+
     function info_entry_fee(Human $human) {
         if($human->age <= 5){
             print($human->name."さんの入場料金は ".$this->entry_fee["infant"]." 円です。".PHP_EOL);
@@ -383,7 +384,7 @@ class Zoo
             print($human->name."さんの入場料金は ".$this->entry_fee["senior"]." 円です。".PHP_EOL);
         }
     }
-    
+
 }
 
 $zoo = new Zoo("旭山動物園",[ "infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
@@ -448,3 +449,4 @@ for ($i = 1; $i <= 30; $i++){
 
     echo $result. PHP_EOL;
 }
+?>
