@@ -84,7 +84,7 @@ print("#####q8#####".PHP_EOL);
 $programming_languages = ["php","ruby","python","javascript"];
 
   # 以下に回答を記載
-  $programming_languages = ["php","ruby","python","javascript"];
+
 
   # コードを追加
   $programming_languages = array_map('ucfirst', $programming_languages);
