@@ -150,7 +150,11 @@ print("#####q12#####".PHP_EOL);
 $data = [ "user" => [ "name" => "satou", "age" => 33 ] ];
 
   # 以下に回答を記載
-
+  foreach($data["user"] as $key => $name){
+    if($key == "name"){
+      echo $name;
+    }
+    }
 echo PHP_EOL;
 
 print("#####q13#####".PHP_EOL);
@@ -159,13 +163,17 @@ $update_data = [ "age" => 32, "address" => "沖縄" ];
 
   # 以下に回答を記載
 
+  $user_data = array_merge($user_data, $update_data);
+  print_r($user_data);
 echo PHP_EOL;
 
 print("#####q14#####".PHP_EOL);
 $data = [ "name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com" ];
 
   # 以下に回答を記載
-
+  $data2 = [];
+  $data2 = array_values($data);
+  print_r($data2);
 echo PHP_EOL;
 
 print("#####q15#####".PHP_EOL);
@@ -173,7 +181,22 @@ $data1 = [ "name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admi
 $data2 = [ "name" => "yamada", "hobby" => "baseball", "role" => "normal" ];
 
   # 以下に回答を記載
-
+  foreach($data1 as $key => $age1){
+    if($key == "age"){
+      echo "OK".PHP_EOL;
+    }else{
+      echo "NG".PHP_EOL;
+    }
+  }
+  echo "==================".PHP_EOL;
+  $data2 = [ "name" => "yamada", "hobby" => "baseball", "role" => "normal" ];
+  foreach($data2 as $key => $age2){
+    if($key == "age"){
+      echo "OK".PHP_EOL;
+    }else{
+      echo "NG".PHP_EOL;
+    }
+  }
 echo PHP_EOL;
 
 print("#####q16#####".PHP_EOL);
@@ -185,7 +208,9 @@ $users = [
 ];
 
   # 以下に回答を記載
-
+  foreach($users as $user){
+    echo "私の名前は".$user["name"]."です。年齢は".$user["age"]."歳です。".PHP_EOL;
+  }
 echo PHP_EOL;
 
 print("#####q17#####".PHP_EOL);
