@@ -181,21 +181,18 @@ $data1 = [ "name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admi
 $data2 = [ "name" => "yamada", "hobby" => "baseball", "role" => "normal" ];
 
   # 以下に回答を記載
-  foreach($data1 as $key => $age1){
-    if($key == "age"){
-      echo "OK".PHP_EOL;
-    }else{
-      echo "NG".PHP_EOL;
-    }
+  if(isset($data1["age"])){
+    echo "OK".PHP_EOL;
+  }else{
+    echo "NG".PHP_EOL;
   }
   echo "==================".PHP_EOL;
   $data2 = [ "name" => "yamada", "hobby" => "baseball", "role" => "normal" ];
-  foreach($data2 as $key => $age2){
-    if($key == "age"){
-      echo "OK".PHP_EOL;
-    }else{
-      echo "NG".PHP_EOL;
-    }
+
+  if(isset($data2["age"])){
+    echo "OK".PHP_EOL;
+  }else{
+    echo "NG".PHP_EOL;
   }
 echo PHP_EOL;
 
