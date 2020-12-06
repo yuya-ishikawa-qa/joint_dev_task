@@ -23,7 +23,9 @@ $array2 = ["bird", "bat", "tiger"];
 
 echo PHP_EOL;
 
-print_r(array_merge($array1, $array2));
+$array = array_merge($array1, $array2);
+
+print_r($array);
 
 echo PHP_EOL;
 
@@ -39,11 +41,10 @@ $numbers_count = array_count_values($numbers);
 
 foreach ($numbers_count as $key => $value) {
     if ($key === 3) {
-        echo "配列の中に" . $key .  "は、" . $value . "個あります。";
+        echo "配列の中に `" . $key .  "` は、" . $value . " 個あります。" . PHP_EOL;
     }
 }
 
-echo PHP_EOL;
 echo PHP_EOL;
 
 ?>
