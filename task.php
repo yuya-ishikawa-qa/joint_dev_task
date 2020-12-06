@@ -35,7 +35,21 @@ $numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9];
 
 echo PHP_EOL;
 
+$numbers_count = array_count_values($numbers);
+
+foreach ($numbers_count as $key => $value) {
+    if ($key === 3) {
+        echo "配列の中に" . $key .  "は、" . $value . "個あります。";
+    }
+}
+
+echo PHP_EOL;
+echo PHP_EOL;
+
 ?>
+
+//------------------------ここまで完了------------------------
+
 print("#####q4#####" . PHP_EOL);
 $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null, "バレー"];
 
