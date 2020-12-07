@@ -47,16 +47,41 @@ foreach ($numbers_count as $key => $value) {
 
 echo PHP_EOL;
 
-?>
-
-//------------------------ここまで完了------------------------
-
 print("#####q4#####" . PHP_EOL);
 $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null, "バレー"];
 
 # 以下に回答を記載
 
+// コード 案 1
+
 echo PHP_EOL;
+
+$result_sports1 = array_unique($sports);
+$result_sports2 = array_filter($result_sports1, "strlen");
+$sports = array_values($result_sports2);
+print_r($sports);
+
+echo PHP_EOL;
+
+//array_unique()単品だとインデックスが歯抜けになりましたので、
+//array_filter()とarray_values()で詰めてみました。
+
+//可読性を考慮すると 案 1 の方が良いと思いますがいかがでしょうか？
+//最後、$sports に入れ直すのもどうなのか迷っています。(別な変数名を付けるか )
+//ご意見いただけますと嬉しいです。
+
+
+// コード 案 2
+
+echo PHP_EOL;
+
+print_r(array_values((array_filter(array_unique($sports), "strlen"))));
+
+echo PHP_EOL;
+
+?>
+
+//------------------------ここまで完了------------------------
 
 print("#####q5#####" . PHP_EOL);
 $array1 = [];
