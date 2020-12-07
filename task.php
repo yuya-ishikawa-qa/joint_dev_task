@@ -79,10 +79,6 @@ print_r(array_values((array_filter(array_unique($sports), "strlen"))));
 
 echo PHP_EOL;
 
-?>
-
-//------------------------ここまで完了------------------------
-
 print("#####q5#####" . PHP_EOL);
 $array1 = [];
 $array2 = [1, 5, 8, 10];
@@ -90,6 +86,30 @@ $array2 = [1, 5, 8, 10];
 # 以下に回答を記載
 
 echo PHP_EOL;
+
+if (empty($array1)) {
+    $result_array1 = "true";
+} else {
+    $result_array1 = "false";
+};
+
+print '$array1 = ' . $result_array1 . PHP_EOL;
+
+echo PHP_EOL;
+
+if (empty($array2)) {
+    $result_array2 = "true";
+} else {
+    $result_array2 = "false";
+};
+
+print '$array2 = ' . $result_array2 . PHP_EOL;
+
+echo PHP_EOL;
+
+?>
+
+//------------------------ここまで完了------------------------
 
 print("#####q6#####" . PHP_EOL);
 $numbers1 = [1, 2, 3, 4, 5];
