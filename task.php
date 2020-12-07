@@ -47,6 +47,8 @@ foreach ($numbers_count as $key => $value) {
 
 echo PHP_EOL;
 
+//------------------------12/7 提出 ここから------------------------
+
 print("#####q4#####" . PHP_EOL);
 $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null, "バレー"];
 
