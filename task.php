@@ -107,16 +107,22 @@ print '$array2 = ' . $result_array2 . PHP_EOL;
 
 echo PHP_EOL;
 
-?>
-
-//------------------------ここまで完了------------------------
-
 print("#####q6#####" . PHP_EOL);
 $numbers1 = [1, 2, 3, 4, 5];
 
 # 以下に回答を記載
 
 echo PHP_EOL;
+
+print_r(array_map(function ($number) {
+    return $number * 10;
+}, $numbers1));
+
+echo PHP_EOL;
+
+?>
+
+//------------------------ここまで完了------------------------
 
 print("#####q7#####" . PHP_EOL);
 $array = ["1", "2", "3", "4", "5"];
