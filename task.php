@@ -59,44 +59,57 @@ if(empty($array_check)){
 }
 echo PHP_EOL;
 
-// print("#####q6#####".PHP_EOL);
-// $numbers1 = [1, 2, 3, 4, 5];
+print("#####q6#####".PHP_EOL);
+$numbers1 = [1, 2, 3, 4, 5];
 
-//   # 以下に回答を記載
+  # 以下に回答を記載
+$numbers2 = [];
+foreach($numbers1 as $number){
+  $number *= 10;
+  array_push($numbers2,$number);
+}
+print_r($numbers2);
+echo PHP_EOL;
 
-// echo PHP_EOL;
+print("#####q7#####".PHP_EOL);
+$array = ["1", "2", "3", "4", "5"];
 
-// print("#####q7#####".PHP_EOL);
-// $array = ["1", "2", "3", "4", "5"];
+  # 以下に回答を記載
+$array = array_map(intval,$array);
+print_r($array);
+echo PHP_EOL;
 
-//   # 以下に回答を記載
+print("#####q8#####".PHP_EOL);
+$programming_languages = ["php","ruby","python","javascript"];
 
-// echo PHP_EOL;
+# 以下に回答を記載
+$programming_languages = array_map('ucwords', $programming_languages);
+$upper_case_programming_languages = array_map('strtoupper', $programming_languages);
+  # 以下は変更しないで下さい
+print_r($programming_languages);
+echo PHP_EOL;
+print_r($upper_case_programming_languages);
 
-// print("#####q8#####".PHP_EOL);
-// $programming_languages = ["php","ruby","python","javascript"];
+echo PHP_EOL;
 
-//   # 以下に回答を記載
+print("#####q9#####".PHP_EOL);
+$names = ["田中", "佐藤", "佐々木", "高橋"];
 
-//   # 以下は変更しないで下さい
-// print_r($programming_languages);
-// echo PHP_EOL;
-// print_r($upper_case_programming_languages);
-
-// echo PHP_EOL;
-
-// print("#####q9#####".PHP_EOL);
-// $names = ["田中", "佐藤", "佐々木", "高橋"];
-
-//   # 以下に回答を記載
-
-// echo PHP_EOL;
+$names_counts =[];
+  # 以下に回答を記載
+foreach($names as $key => $name){
+  $count = $key + 1;
+  $names_count = "会員No.".$count." ".$name;
+  array_push($names_counts, $names_count);
+}
+print_r($names_counts);
+echo PHP_EOL;
 
 // print("#####q10#####".PHP_EOL);
 // $foods = ["いか","たこ","うに","しゃけ","うにぎり","うに軍艦","うに丼"];
 
 //   # 以下に回答を記載
-
+  
 // echo PHP_EOL;
 
 // print("#####q11#####".PHP_EOL);
