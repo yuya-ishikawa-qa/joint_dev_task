@@ -52,7 +52,7 @@ $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null,
 
 # 以下に回答を記載
 
-// コード 案 1
+// コード 案 1 　この書き方で
 
 echo PHP_EOL;
 
@@ -71,11 +71,16 @@ echo PHP_EOL;
 //ご意見いただけますと嬉しいです。
 
 
-// コード 案 2
+
+//お忙しい中、お時間・ご意見を頂き誠にありがとうございました。
+
+
+
+// コード 案 2　非推奨
 
 echo PHP_EOL;
 
-print_r(array_values((array_filter(array_unique($sports), "strlen"))));
+print_r(array_values((array_filter(array_unique($sports), "strlen")))); //非推奨　分かりづらい 可読性NG
 
 echo PHP_EOL;
 
