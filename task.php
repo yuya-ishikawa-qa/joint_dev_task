@@ -105,19 +105,44 @@ foreach($names as $key => $name){
 print_r($names_counts);
 echo PHP_EOL;
 
-// print("#####q10#####".PHP_EOL);
-// $foods = ["いか","たこ","うに","しゃけ","うにぎり","うに軍艦","うに丼"];
+print("#####q10#####".PHP_EOL);
+$foods = ["いか","たこ","うに","しゃけ","うにぎり","うに軍艦","うに丼"];
 
-//   # 以下に回答を記載
-  
-// echo PHP_EOL;
+# 以下に回答を記載
+foreach ($foods as $food) {
+  if (preg_match('/うに/', $food)) {
+    echo "好物です" . PHP_EOL;
+  } else {
+    echo "まぁまぁ好きです" . PHP_EOL;;
+  }
+}
+echo PHP_EOL;
 
-// print("#####q11#####".PHP_EOL);
-// $sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]];
+print("#####q11#####".PHP_EOL);
+$sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]];
+# 以下に回答を記載
+$sports2 = [];
+foreach ($sports as $key => $sport) {
+  if(is_array($sport)){
+    $sports2 = array_merge($sports2, $sport);
+  }else{
+    array_push($sports2, $sport);
+  }
+}
+$sports2 = array_unique($sports2);
+$sports2 = array_values($sports2);
+$sports3 = [];
+foreach ($sports2 as $key => $sport) {
+  $number = $key + 1;
+  $sport3 = "No." . $number . " " . $sport;
+  array_push($sports3, $sport3);
+}
 
-//   # 以下に回答を記載
-
-// echo PHP_EOL;
+print_r("ユーザの趣味一覧" . PHP_EOL);
+foreach ($sports3 as $sport) {
+  print($sport . PHP_EOL);
+}
+echo PHP_EOL;
 
 // print("#####q12#####".PHP_EOL);
 // $data = [ "user" => [ "name" => "satou", "age" => 33 ] ];
