@@ -6,8 +6,8 @@ print("#####q1#####".PHP_EOL);
 $names = ["田中", "佐藤", "佐々木", "高橋"];
 
   # 以下に回答を記載
-$names[] = "斎藤";
-print_r($names[4]);
+array_push($names,"斎藤");
+print_r($names);
 echo PHP_EOL;
 
 print("#####q2#####".PHP_EOL);
@@ -75,7 +75,7 @@ print("#####q7#####".PHP_EOL);
 $array = ["1", "2", "3", "4", "5"];
 
   # 以下に回答を記載
-$array = array_map(intval,$array);
+$array = array_map('intval',$array);
 print_r($array);
 echo PHP_EOL;
 
