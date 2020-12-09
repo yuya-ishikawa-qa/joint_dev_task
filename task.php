@@ -41,7 +41,7 @@ $numbers_count = array_count_values($numbers);
 
 foreach ($numbers_count as $key => $value) {
     if ($key === 3) {
-        echo "配列の中に `" . $key .  "` は、" . $value . " 個あります。" . PHP_EOL;
+        echo "配列の中に " . $key .  " は、" . $value . " 個あります。" . PHP_EOL;
     }
 }
 
@@ -49,10 +49,6 @@ echo PHP_EOL;
 
 print("#####q4#####" . PHP_EOL);
 $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null, "バレー"];
-
-# 以下に回答を記載
-
-// コード 案 1 　この書き方で
 
 echo PHP_EOL;
 
@@ -62,25 +58,6 @@ $sports = array_values($result_sports2);
 print_r($sports);
 
 echo PHP_EOL;
-
-//array_unique()単品だとインデックスが歯抜けになりましたので、
-//array_filter()とarray_values()で詰めてみました。
-
-//可読性を考慮すると 案 1 の方が良いと思いますがいかがでしょうか？
-//最後、$sports に入れ直すのもどうなのか迷っています。(別な変数名を付けるか )
-//ご意見いただけますと嬉しいです。
-
-
-
-//お忙しい中、お時間・ご意見を頂き誠にありがとうございました。
-
-
-
-// コード 案 2　非推奨
-
-echo PHP_EOL;
-
-print_r(array_values((array_filter(array_unique($sports), "strlen")))); //非推奨　分かりづらい 可読性NG
 
 echo PHP_EOL;
 
@@ -134,6 +111,8 @@ $array = ["1", "2", "3", "4", "5"];
 
 echo PHP_EOL;
 
+//var_dump で int型 確認済みです。
+
 print_r(array_map('intval', $array));
 
 echo PHP_EOL;
@@ -145,7 +124,7 @@ $programming_languages = ["php", "ruby", "python", "javascript"];
 $programming_languages = array_map('ucfirst', $programming_languages);
 $upper_case_programming_languages = array_map('strtoupper', $programming_languages);
 
-
+echo PHP_EOL;
 # 以下は変更しないで下さい
 print_r($programming_languages);
 echo PHP_EOL;
@@ -160,6 +139,7 @@ foreach ($names as $key => $value) {
     $member_number = $key + 1;
     $member_names[] = "会員No." . $member_number . " " . $value;
 }
+echo PHP_EOL;
 
 print_r($member_names);
 
