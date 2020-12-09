@@ -129,7 +129,7 @@ $array = ["1", "2", "3", "4", "5"];
 
 echo PHP_EOL;
 
-print_r(array_map(intval, $array));
+print_r(array_map('intval', $array));
 
 echo PHP_EOL;
 
