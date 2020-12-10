@@ -154,13 +154,26 @@ $foods = ["いか", "たこ", "うに", "しゃけ", "うにぎり", "うに軍�
 
 # 以下に回答を記載
 
+//「 まぁまぁ好きです 」が出ることも確認済みです。
+
+$search_word = "いか";
+$result_foods = in_array( $search_word , $foods );
+
+echo PHP_EOL;
+
+if( $result_foods ) {
+    print( "好物です" .PHP_EOL );
+} else {
+    print( "まぁまぁ好きです" .PHP_EOL);
+};
+
 echo PHP_EOL;
 
 print("#####q11#####" . PHP_EOL);
 $sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]];
 
 # 以下に回答を記載
-
+print_r($sports);
 echo PHP_EOL;
 
 print("#####q12#####" . PHP_EOL);
