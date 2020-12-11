@@ -59,8 +59,6 @@ print_r($sports);
 
 echo PHP_EOL;
 
-echo PHP_EOL;
-
 print("#####q5#####" . PHP_EOL);
 $array1 = [];
 $array2 = [1, 5, 8, 10];
@@ -101,8 +99,6 @@ print_r(array_map(function ($number) {
 }, $numbers1));
 
 echo PHP_EOL;
-
-//------------------------12/9 提出 ここから------------------------
 
 print("#####q7#####" . PHP_EOL);
 $array = ["1", "2", "3", "4", "5"];
@@ -145,9 +141,8 @@ print_r($member_names);
 
 echo PHP_EOL;
 
-?>
+//------------------------12/11 提出 ここから------------------------
 
-//------------------------ここまで完了------------------------
 
 print("#####q10#####" . PHP_EOL);
 $foods = ["いか", "たこ", "うに", "しゃけ", "うにぎり", "うに軍艦", "うに丼"];
@@ -173,8 +168,34 @@ print("#####q11#####" . PHP_EOL);
 $sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]];
 
 # 以下に回答を記載
-print_r($sports);
-echo PHP_EOL;
+
+print(PHP_EOL);
+
+$merge_sports = [];
+foreach($sports as $key => $result_sport){
+    if(is_array($result_sport)){
+        $merge_sports = array_merge($merge_sports,$result_sport);
+    }else{
+        array_push($merge_sports,$result_sport);
+    }
+}
+
+$result_sports1 = array_unique($merge_sports);
+$result_sports2 = array_values($result_sports1);
+
+foreach ($result_sports2 as $key => $hobbies) {
+    if ($hobbies === reset($result_sports2)) {
+        print("ユーザーの趣味一覧" . PHP_EOL);
+    }
+    $users_hobbies_number = $key + 1;
+    print("No" . $users_hobbies_number . " " . $hobbies . PHP_EOL);
+};
+print(PHP_EOL);
+
+?>
+
+//------------------------ここまで完了------------------------
+
 
 print("#####q12#####" . PHP_EOL);
 $data = ["user" => ["name" => "satou", "age" => 33]];
