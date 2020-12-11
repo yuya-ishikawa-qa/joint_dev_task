@@ -169,7 +169,7 @@ $sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"],
 
 # 以下に回答を記載
 
-print(PHP_EOL);
+echo PHP_EOL;
 
 $merge_sports = [];
 foreach($sports as $key => $result_sport){
@@ -190,12 +190,7 @@ foreach ($result_sports2 as $key => $hobbies) {
     $users_hobbies_number = $key + 1;
     print("No" . $users_hobbies_number . " " . $hobbies . PHP_EOL);
 };
-print(PHP_EOL);
-
-?>
-
-//------------------------ここまで完了------------------------
-
+echo PHP_EOL;
 
 print("#####q12#####" . PHP_EOL);
 $data = ["user" => ["name" => "satou", "age" => 33]];
@@ -203,6 +198,14 @@ $data = ["user" => ["name" => "satou", "age" => 33]];
 # 以下に回答を記載
 
 echo PHP_EOL;
+
+print($data["user"]["name"] . PHP_EOL); 
+
+echo PHP_EOL;
+
+?>
+
+//------------------------ここまで完了------------------------
 
 print("#####q13#####" . PHP_EOL);
 $user_data = ["name" => "神里", "age" => 31, "address" => "埼玉"];
