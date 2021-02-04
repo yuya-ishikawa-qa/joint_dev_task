@@ -63,7 +63,7 @@ $numbers1 = [1, 2, 3, 4, 5];
   # 以下に回答を記載
 $numbers2 = [];
 foreach($numbers1 as $number){
-  $number += 10;
+  $number *= 10;
   array_push($numbers2,$number);
 }
 
@@ -76,13 +76,9 @@ print("#####q7#####".PHP_EOL);
 $array = ["1", "2", "3", "4", "5"];
 
   # 以下に回答を記載
-$array2 = [];
-foreach($array as $list){
-  $list = (int)$list;
-  array_push($array2,$list);
-}
+$array = array_map('intval',$array);
 
-print_r($array2);
+print_r($array);
 
 echo PHP_EOL;
 
