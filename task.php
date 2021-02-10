@@ -5,21 +5,45 @@ print("#####q1#####".PHP_EOL);
 $names = ["田中", "佐藤", "佐々木", "高橋"];
 
   # 以下に回答を記載
+<?php
+$names = ["田中", "佐藤", "佐々木", "高橋"];
+$names[] = "斎藤";
+
+print_r($names);
+
 
 echo PHP_EOL;
+?>
 
 print("#####q2#####".PHP_EOL);
 $array1 = ["dog", "cat", "fish"];
 $array2 = ["bird", "bat", "tiger"];
 
   # 以下に回答を記載
+<?php
+$array1 = ["dog", "cat", "fish"];
+$array2 = ["bird", "bat", "tiger"];
+$array = array_merge($array1, $array2);
 
+print_r($array);
+?>
 echo PHP_EOL;
 
 print("#####q3#####".PHP_EOL);
 $numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9];
 
   # 以下に回答を記載
+<?php
+$numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9];
+$counter = 0;
+
+foreach($numbers as $number) {
+  if($number === 3){
+    $counter++;
+ }
+}
+print_r($count . "回".PHP_EOL);
+?>
 
 echo PHP_EOL;
 
@@ -183,9 +207,9 @@ class Human
 
 class Zoo
 {
-    
+
   # コードを追加
-    
+
 }
 
 $zoo = new Zoo("旭山動物園",[ "infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
