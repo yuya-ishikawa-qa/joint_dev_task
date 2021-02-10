@@ -42,7 +42,7 @@ foreach($numbers as $number) {
     $counter++;
  }
 }
-print_r($count . "回".PHP_EOL);
+print_r($counter . "回".PHP_EOL);
 ?>
 
 echo PHP_EOL;
