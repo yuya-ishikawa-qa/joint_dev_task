@@ -51,6 +51,11 @@ print("#####q4#####".PHP_EOL);
 $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null, "バレー"];
 
   # 以下に回答を記載
+<?php
+$sports = ["サッカー", "フットサル", null, "野球", "バスケ", null, "バレー"];
+$sports = array_diff($sports,[null]);
+print_r($sports);
+?>
 
 echo PHP_EOL;
 
