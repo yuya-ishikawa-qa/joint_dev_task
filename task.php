@@ -81,8 +81,16 @@ print("#####q6#####".PHP_EOL);
 $numbers1 = [1, 2, 3, 4, 5];
 
   # 以下に回答を記載
+<?php
+$numbers1 = [1, 2, 3, 4, 5];
 
-
+$numbers2 = [];
+foreach($numbers1 as $number){
+    $number *= 10;
+    array_push($numbers2,$number);
+}
+print_r($numbers2);
+?>
 echo PHP_EOL;
 
 print("#####q7#####".PHP_EOL);
