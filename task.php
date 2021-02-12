@@ -97,6 +97,10 @@ print("#####q7#####".PHP_EOL);
 $array = ["1", "2", "3", "4", "5"];
 
   # 以下に回答を記載
+  <?php
+$array = ["1", "2", "3", "4", "5"];
+  print_r(array_map('intval', $array));
+?>
 
 echo PHP_EOL;
 
