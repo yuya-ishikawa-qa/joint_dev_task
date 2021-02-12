@@ -64,6 +64,16 @@ $array1 = [];
 $array2 = [1, 5, 8, 10];
 
   # 以下に回答を記載
+<?php
+$array1 = [];
+var_export(empty($array1));
+
+echo PHP_EOL;
+
+$array2 = [1, 5, 8, 10];
+var_export(empty($array2));
+
+?>
 
 echo PHP_EOL;
 
@@ -71,6 +81,7 @@ print("#####q6#####".PHP_EOL);
 $numbers1 = [1, 2, 3, 4, 5];
 
   # 以下に回答を記載
+
 
 echo PHP_EOL;
 
