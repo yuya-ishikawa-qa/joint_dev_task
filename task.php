@@ -123,7 +123,16 @@ print("#####q9#####".PHP_EOL);
 $names = ["田中", "佐藤", "佐々木", "高橋"];
 
   # 以下に回答を記載
-
+  <?php
+$names = ["田中", "佐藤", "佐々木", "高橋"];
+$names2 = [];
+foreach($names as $key => $name){
+    $number = $key + 1;
+    $name2 = "会員No.".$number." ".$name;
+    array_push($names2,$name2);
+}
+print_r($names2);
+?>
 echo PHP_EOL;
 
 print("#####q10#####".PHP_EOL);
