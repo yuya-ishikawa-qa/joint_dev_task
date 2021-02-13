@@ -1,10 +1,20 @@
 <?php
-$names = ["田中", "佐藤", "佐々木", "高橋"];
-$names2 = [];
-foreach($names as $key => $name){
-    $number = $key + 1;
-    $name2 = "会員No.".$number." ".$name;
-    array_push($names2,$name2);
+$foods = ["いか","たこ","うに","しゃけ","うにぎり","うに軍艦","うに丼"];
+foreach($foods as $food){
+  if(preg_match('/うに/',$food)){
+   print("好物です"."\n");
+  }else{
+   print ("まぁまぁ好きです"."\n");
+  }
 }
-print_r($names2);
+?>
+
+<?php
+foreach($foods as $food){
+    if(preg_match('/うに/',$food)){
+        print('好物です'.PHP_EOL);
+    }else{
+        print('まぁまぁ好きです'.PHP_EOL);
+    }
+}
 ?>
