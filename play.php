@@ -1,7 +1,19 @@
 <?php
-$user_data = [ "name" => "神里", "age" => 31, "address" => "埼玉"];
-$update_data = [ "age" => 32, "address" => "沖縄" ];
-  $user_data = $update_data + $user_data;
+$data1 = [ "name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin" ];
 
-print_r($user_data);
+if( array_key_exists('age',$data1) ) {
+    print('OK'.PHP_EOL);
+} else {
+    print('NG'.PHP_EOL);
+}
+// array_key_exists 指定したキーまたは、添字が配列に存在するか調べる
+
+$data2 = [ "name" => "yamada", "hobby" => "baseball", "role" => "normal" ];
+if( array_key_exists('age' ,$date2) ){
+    print('OK'.PHP_EOL);
+} else {
+    print('NG'.PHP_EOL);
+}
+
+print_r($new_data);
 ?>

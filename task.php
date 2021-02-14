@@ -189,6 +189,17 @@ print("#####q14#####".PHP_EOL);
 $data = [ "name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com" ];
 
   # 以下に回答を記載
+  <?php
+$data = [ "name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com" ];
+
+$new_data = [];
+foreach($data as $one_data){
+    array_push($new_data,$one_data);
+    // 新しい配列$new_dataを作って、$dataの連想配列の要素を$new_dataに追加する
+}
+
+print_r($new_data);
+?>
 
 echo PHP_EOL;
 
@@ -197,6 +208,25 @@ $data1 = [ "name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admi
 $data2 = [ "name" => "yamada", "hobby" => "baseball", "role" => "normal" ];
 
   # 以下に回答を記載
+  <?php
+$data1 = [ "name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin" ];
+
+if( array_key_exists('age',$data1) ) {
+    print('OK'.PHP_EOL);
+} else {
+    print('NG'.PHP_EOL);
+}
+// array_key_exists 指定したキーまたは、添字が配列に存在するか調べる
+
+$data2 = [ "name" => "yamada", "hobby" => "baseball", "role" => "normal" ];
+if( array_key_exists('age' ,$date2) ){
+    print('OK'.PHP_EOL);
+} else {
+    print('NG'.PHP_EOL);
+}
+
+print_r($new_data);
+?>
 
 echo PHP_EOL;
 
