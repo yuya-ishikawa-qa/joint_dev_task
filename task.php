@@ -219,7 +219,7 @@ if( array_key_exists('age',$data1) ) {
 // array_key_exists 指定したキーまたは、添字が配列に存在するか調べる
 
 $data2 = [ "name" => "yamada", "hobby" => "baseball", "role" => "normal" ];
-if( array_key_exists('age' ,$date2) ){
+if( array_key_exists('age' ,$data2) ){
     print('OK'.PHP_EOL);
 } else {
     print('NG'.PHP_EOL);

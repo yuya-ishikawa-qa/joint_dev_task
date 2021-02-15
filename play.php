@@ -1,12 +1,19 @@
-<?php
-$users = [
-  [ "name" => "satou", "age" => 22 ],
-  [ "name" => "yamada", "age" => 12 ],
-  [ "name" => "takahashi", "age" => 32 ],
-  [ "name" => "nakamura", "age" => 41 ]
-];
-// $userをキーに指定して出力
-foreach($users as $key => $user){
-  echo "私の名前は".$user["name"]."です。年齢は".$user["age"]."歳です。".PHP_EOL;
-}
-?>
+ <?php
+ $data1 = [ "name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin" ];
+
+ if( array_key_exists('age',$data1) ) {
+     print('OK'.PHP_EOL);
+ } else {
+     print('NG'.PHP_EOL);
+ }
+ // array_key_exists 指定したキーまたは、添字が配列に存在するか調べる
+
+ $data2 = [ "name" => "yamada", "hobby" => "baseball", "role" => "normal" ];
+ if( array_key_exists('age' ,$data2) ){
+     print('OK'.PHP_EOL);
+ } else {
+     print('NG'.PHP_EOL);
+ }
+
+ print_r($new_data);
+ ?>
