@@ -1,28 +1,31 @@
  <?php
-$sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]];
+class User
+{
 
-$sports2 = [];
-foreach($sports as $key => $sport){
-    if(is_array($sport)){
-        $sports2 = array_merge($sports2,$sport);
-        // is_array $sportが配列なら$sports2と結合
-    }else{
-        array_push($sports2,$sport);
-        // 配列でなければ後ろに追加？
+    protected $name;
+    protected $age;
+    protected $gender;
+
+    function __construct($user_name,$user_age,$user_gender)    {
+        $this->name = $user_name;
+        $this->age = $user_age;
+        $this->gender = $user_gender;
     }
-}
-$sports2 = array_unique($sports2);
-// array_unique　重複を削除
-$sports2 = array_values($sports2);
-// array_uniqueで飛び飛びになっているのでarray_valuesでキーを降り直す
-$sports3 = [];
-foreach($sports2 as $key => $sport){
-    $number = $key + 1;
-    $sport3 = "No.".$number." ".$sport;
-    array_push($sports3,$sport3);
+
+    function info() {
+        print("名前:".$this->name.PHP_EOL);
+        print("年齢:".$this->age.PHP_EOL);
+        print("性別:".$this->gender.PHP_EOL);
+    }
+
 }
 
-print_r("ユーザの趣味一覧".PHP_EOL);
-foreach($sports3 as $sport){
-    print($sport.PHP_EOL);
-} ?>
+$user1 = new User("神里",32,"男");
+$user2 = new User("あじー",32,"男");
+
+$user1->info();
+print("-------------".PHP_EOL);
+$user2->info();
+
+echo PHP_EOL;
+?>
