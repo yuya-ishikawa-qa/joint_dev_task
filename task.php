@@ -370,12 +370,12 @@ echo PHP_EOL;
 print("#####q20#####".PHP_EOL);
 class Human
 {
-    public $name;
-    public $age;
+  public $name;
+  public $age;
 
-    function __construct($human_name, $human_age){
-        $this->name = $human_name;
-        $this->age = $human_age;
+  function __construct($human_name, $human_age){
+    $this->name = $human_name;
+    $this->age = $human_age;
     }
   # コードを追加
 }
@@ -385,22 +385,22 @@ class Zoo
   protected $name;
   protected $price;
   function __construct($zoo_name, $zoo_price){
-      $this->name = $zoo_name;
-      $this->price = $zoo_price;
+    $this->name = $zoo_name;
+    $this->price = $zoo_price;
 
   }
   function info_entry_fee(Human $human) {
-      if($human->age <= 5){
-          print($human->name."さんの入場料金は ".$this->price["infant"]." 円です。".PHP_EOL);
-      }elseif($human->age <= 12){
-          print($human->name."さんの入場料金は ".$this->price["children"]." 円です。".PHP_EOL);
-      }elseif($human->age <= 64){
-          print($human->name."さんの入場料金は ".$this->price["adult"]." 円です。".PHP_EOL);
-      }elseif($human->age <= 120){
-          print($human->name."さんの入場料金は ".$this->price["senior"]." 円です。".PHP_EOL);
-      }
-      // newに合わせる
-        # コードを追加
+    if($human->age <= 5){
+        print($human->name."さんの入場料金は ".$this->price["infant"]." 円です。".PHP_EOL);
+    }elseif($human->age <= 12){
+        print($human->name."さんの入場料金は ".$this->price["children"]." 円です。".PHP_EOL);
+    }elseif($human->age <= 64){
+        print($human->name."さんの入場料金は ".$this->price["adult"]." 円です。".PHP_EOL);
+    }elseif($human->age <= 120){
+        print($human->name."さんの入場料金は ".$this->price["senior"]." 円です。".PHP_EOL);
+    }
+    // newに合わせる
+      # コードを追加
   }
 }
 $zoo = new Zoo("旭山動物園",[ "infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
@@ -422,19 +422,19 @@ echo PHP_EOL;
 <?php
 print("#####q21#####".PHP_EOL);
 for($i=1 ; $i < 31 ; $i++) {
-    if($i % 3 == 0 && $i % 5 == 0){
-        echo "FizzBuzz".PHP_EOL;
-    }elseif($i % 3 == 0 && $i % 7 == 0){
-        echo "FizzHoge".PHP_EOL;
-    }elseif($i % 3 == 0){
-        echo "Fizz".PHP_EOL;
-    }elseif($i % 5 == 0){
-        echo "Buzz".PHP_EOL;
-    }elseif($i % 7 == 0){
-        echo "Hoge".PHP_EOL;
-    }else{
-        echo $i.PHP_EOL;
-    }
+  if($i % 3 == 0 && $i % 5 == 0){
+      echo "FizzBuzz".PHP_EOL;
+  }elseif($i % 3 == 0 && $i % 7 == 0){
+      echo "FizzHoge".PHP_EOL;
+  }elseif($i % 3 == 0){
+      echo "Fizz".PHP_EOL;
+  }elseif($i % 5 == 0){
+      echo "Buzz".PHP_EOL;
+  }elseif($i % 7 == 0){
+      echo "Hoge".PHP_EOL;
+  }else{
+      echo $i.PHP_EOL;
+  }
 }
 
 echo PHP_EOL;
