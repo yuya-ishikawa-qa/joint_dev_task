@@ -284,22 +284,22 @@ print("#####q17#####".PHP_EOL);
 
 class User
 {
-    // プロパティの宣言  User clssで使えるようにする
-    protected $name;
-    protected $age;
-    protected $gender;
-    // コンストラクタの記述
-    function __construct($user_name,$user_age,$user_gender) {
-        $this->name = $user_name;
-        $this->age = $user_age;
-        $this->gender = $user_gender;
-    }
-    // info関数の定義
-    function info() {
-        print("名前:".$this->name.PHP_EOL);
-        print("年齢:".$this->age.PHP_EOL);
-        print("性別:".$this->gender.PHP_EOL);
-    }
+  // プロパティの宣言  User clssで使えるようにする
+  protected $name;
+  protected $age;
+  protected $gender;
+  // コンストラクタの記述
+  function __construct($user_name,$user_age,$user_gender) {
+      $this->name = $user_name;
+      $this->age = $user_age;
+      $this->gender = $user_gender;
+  }
+  // info関数の定義
+  function info() {
+      print("名前:".$this->name.PHP_EOL);
+      print("年齢:".$this->age.PHP_EOL);
+      print("性別:".$this->gender.PHP_EOL);
+  }
 
 }
 // コンストラクタの実行
@@ -320,20 +320,20 @@ print("#####q18#####".PHP_EOL);
 # コードを追加
 class Man
 {
-    protected $name;
-    protected $age;
+  protected $name;
+  protected $age;
 
-    function __construct($man_name, $man_age){
-        $this->name = $man_name;
-        $this->age = $man_age;
-    }
-    function introduce(){
-        if($this->age >= 20) {
-            print("こんにちは，".$this->name."と申します。宜しくお願いいたします。".PHP_EOL);
-        }else{
-            print("はいさいまいど〜，".$this->name."です！！！".PHP_EOL);
-        }
-    }
+  function __construct($man_name, $man_age){
+      $this->name = $man_name;
+      $this->age = $man_age;
+  }
+  function introduce(){
+      if($this->age >= 20) {
+          print("こんにちは，".$this->name."と申します。宜しくお願いいたします。".PHP_EOL);
+      }else{
+          print("はいさいまいど〜，".$this->name."です！！！".PHP_EOL);
+      }
+  }
 }
 
 $man1 = new Man("あじー",32);
@@ -382,26 +382,26 @@ class Human
 
 class Zoo
 {
-    protected $name;
-    protected $price;
-    function __construct($zoo_name, $zoo_price){
-        $this->name = $zoo_name;
-        $this->price = $zoo_price;
+  protected $name;
+  protected $price;
+  function __construct($zoo_name, $zoo_price){
+      $this->name = $zoo_name;
+      $this->price = $zoo_price;
 
-    }
-    function info_entry_fee(Human $human) {
-        if($human->age <= 5){
-            print($human->name."さんの入場料金は ".$this->price["infant"]." 円です。".PHP_EOL);
-        }elseif($human->age <= 12){
-            print($human->name."さんの入場料金は ".$this->price["children"]." 円です。".PHP_EOL);
-        }elseif($human->age <= 64){
-            print($human->name."さんの入場料金は ".$this->price["adult"]." 円です。".PHP_EOL);
-        }elseif($human->age <= 120){
-            print($human->name."さんの入場料金は ".$this->price["senior"]." 円です。".PHP_EOL);
-        }
-        // newに合わせる
-          # コードを追加
-    }
+  }
+  function info_entry_fee(Human $human) {
+      if($human->age <= 5){
+          print($human->name."さんの入場料金は ".$this->price["infant"]." 円です。".PHP_EOL);
+      }elseif($human->age <= 12){
+          print($human->name."さんの入場料金は ".$this->price["children"]." 円です。".PHP_EOL);
+      }elseif($human->age <= 64){
+          print($human->name."さんの入場料金は ".$this->price["adult"]." 円です。".PHP_EOL);
+      }elseif($human->age <= 120){
+          print($human->name."さんの入場料金は ".$this->price["senior"]." 円です。".PHP_EOL);
+      }
+      // newに合わせる
+        # コードを追加
+  }
 }
 $zoo = new Zoo("旭山動物園",[ "infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
 
