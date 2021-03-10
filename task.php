@@ -2,7 +2,7 @@
 
 # 課題の回答は このファイル をご利用下さい。
 # 回答の出力を確認される際は，「php task.php」をターミナルから実行して下さい。
-
+/*
 print("#####q1#####".PHP_EOL);
 $names = ["田中", "佐藤", "佐々木", "高橋"];
 
@@ -196,14 +196,30 @@ foreach ($users as $user) {
     echo "私の名前は" . $user["name"] . "です。年齢は" . $user["age"] . "歳です。\n";
 }
 echo PHP_EOL;
+*/
 
-/*
 print("#####q17#####".PHP_EOL);
-class User
+class User 
 {
-
   # コードを追加
+    protected $name;
+    protected $age;
+    protected $sex;
 
+    public function __construct($name, $age, $sex) {
+        $this->name = $name;
+        $this->age = $age;
+        $this->sex = $sex;
+    }
+
+    public function info() {
+        echo <<< EOM
+        名前：$this->name 
+        年齢：$this->age 
+        性別：$this->sex 
+
+        EOM;
+    }
 }
 
 $user1 = new User("神里",32,"男");
@@ -215,9 +231,27 @@ $user2->info();
 
 echo PHP_EOL;
 
+
 print("#####q18#####".PHP_EOL);
 
   # コードを追加
+Class Man {
+    public $name;
+    public $age;
+
+    public function __construct($name, $age) {
+        $this->name = $name;
+        $this->age = $age;
+    } 
+
+    public function introduce() {
+        if ($this->age === 32) {
+            echo "こんにちは，" . $this->name . "と申します。宜しくお願いいたします。\n";
+        } elseif ($this->age === 10) {
+            echo "はいさいまいど〜，" . $this->name . "です！！！";
+        }
+    }
+}
 
 $man1 = new Man("あじー",32);
 $man2 = new Man("ゆたぼん",10);
@@ -227,36 +261,61 @@ $man2->introduce();
 
 echo PHP_EOL;
 
+
 print("#####q19#####".PHP_EOL);
-class Item{
+
+class Item {
+
   # 以下を修正して下さい
+    public $name;
 
-  protected $name;
-
-  function __construct($book_name){
-    $this->name = $book_name;
-  }
+    function __construct($book_name){
+      $this->name = $book_name;
+    }
 }
   # 以下は変更しないで下さい
-
 $book = new Item("ゼロ秒思考");
 print($book->name.PHP_EOL);
 
 echo PHP_EOL;
 
+
 print("#####q20#####".PHP_EOL);
+
 class Human
 {
-
   # コードを追加
+    public $name;
+    public $age;
 
+    public function __construct($name,$age) {
+        $this->name = $name;
+        $this->age = $age;
+    }
 }
 
 class Zoo
 {
-
   # コードを追加
+    public $name;
+    public $entry_fee;
 
+    public function __construct($zoo_name,$entry_fee) {
+        $this->name = $zoo_name;
+        $this->entry_fee = $entry_fee;
+    }
+
+    public function info_entry_fee($human) {
+        if($human->age <= 5){
+            echo $human->name."さんの入場料金は ".$this->entry_fee["infant"]." 円です。\n";
+        }elseif($human->age <= 12){
+            echo $human->name."さんの入場料金は ".$this->entry_fee["children"]." 円です。\n";
+        }elseif($human->age <= 64){
+            echo $human->name."さんの入場料金は ".$this->entry_fee["adult"]." 円です。\n";
+        }elseif($human->age <= 120){
+            echo $human->name."さんの入場料金は ".$this->entry_fee["senior"]." 円です。\n";
+        }
+    }
 }
 
 $zoo = new Zoo("旭山動物園",[ "infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
@@ -269,9 +328,28 @@ $human4 = new Human("ぎん",108);
 $humans = [ $human1, $human2, $human3, $human4 ];
 
 foreach($humans as $human){
-  $zoo->info_entry_fee($human);
+    $zoo->info_entry_fee($human);
 }
 
 echo PHP_EOL;
-*/
+
+
+print("#####q21#####".PHP_EOL);
+
+for ($i = 1; $i <= 30; $i++) {
+    if ($i % 15 === 0) {
+        echo "FizzBuzz\n";
+    } elseif ($i % 21 === 0) {
+        echo "FizzHoge\n";
+    } elseif ($i % 3 === 0) {
+        echo "Fizz\n";
+    } elseif ($i % 5 === 0 ) {
+        echo "Buzz\n";
+    } elseif ($i % 7 === 0) {
+        echo "Hoge\n";
+    } else {
+      echo $i . "\n";
+    }
+}
+
 ?>
