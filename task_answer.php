@@ -155,8 +155,9 @@ foreach($sports as $key => $sport){
         array_push($sports2,$sport);
     }
 }
+
 $sports2 = array_unique($sports2);
-$sports2 = array_values($sports2);
+$sports2 = array_values($sports2);　　
 $sports3 = [];
 foreach($sports2 as $key => $sport){
     $number = $key + 1;
