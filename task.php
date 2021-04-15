@@ -218,51 +218,80 @@ $users = [
   }
   echo PHP_EOL;
 
-// print("#####q17#####".PHP_EOL);
-// class User
-// {
+print("#####q18#####".PHP_EOL);
 
-//   # コードを追加
+ class User{
+  private $name;
+  private $age;
+  private $sex;
 
-// }
+  public function __construct($name,$age,$sex){
+    $this->name = $name;
+    $this->age = $age;
+    $this->sex = $sex;
+  }
 
-// $user1 = new User("神里",32,"男");
-// $user2 = new User("あじー",32,"男");
+  public function info(){
+    echo("名前:".$this->name.PHP_EOL);
+    echo("名前:".$this->age.PHP_EOL);
+    echo("名前:".$this->sex.PHP_EOL);
+  }
+ }
 
-// $user1->info();
-// print("-------------".PHP_EOL);
-// $user2->info();
+$user1 = new User("神里",32,"男");
+$user2 = new User("あじー",32,"男");
 
-// echo PHP_EOL;
+$user1->info();
+print("-------------".PHP_EOL);
+$user2->info();
 
-// print("#####q18#####".PHP_EOL);
+echo PHP_EOL;
 
-//   # コードを追加
+print("#####q18#####".PHP_EOL);
 
-// $man1 = new Man("あじー",32);
-// $man2 = new Man("ゆたぼん",10);
+  # コードを追加
+ class Man{
+   private $name;
+   private $age;
 
-// $man1->introduce();
-// $man2->introduce();
+   public function __construct($name,$age){
+     $this->name = $name;
+     $this->age = $age;
+   }
 
-// echo PHP_EOL;
+   public function introduce(){
+      if($this->age>10){
+        echo "こんにちは,".$this->name."と申します。宜しくお願いいたします。".PHP_EOL;
+      }else{
+        echo "はいさいまいど〜,".$this->name."です！！！";
+        }
+    }
+  }
 
-// print("#####q19#####".PHP_EOL);
-// class Item{
-//   # 以下を修正して下さい
+$man1 = new Man("あじー",32);
+$man2 = new Man("ゆたぼん",10);
 
-//   protected $name;
+$man1->introduce();
+$man2->introduce();
 
-//   function __construct($book_name){
-//     $this->name = $book_name;
-//   }
-// }
-//   # 以下は変更しないで下さい
+echo PHP_EOL;
 
-// $book = new Item("ゼロ秒思考");
-// print($book->name.PHP_EOL);
+print("#####q19#####".PHP_EOL);
+class Item{
+  # 以下を修正して下さい
 
-// echo PHP_EOL;
+  public $name;
+
+  function __construct($book_name){
+    $this->name = $book_name;
+  }
+}
+  # 以下は変更しないで下さい
+
+$book = new Item("ゼロ秒思考");
+print($book->name.PHP_EOL);
+
+echo PHP_EOL;
 
 // print("#####q20#####".PHP_EOL);
 // class Human
