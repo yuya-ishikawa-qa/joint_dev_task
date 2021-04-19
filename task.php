@@ -324,7 +324,7 @@ class Zoo
   public function info_entry_fee(Human $human){
     if($human->age <=5){
       echo $human->name."さんの入場料金は".$this->entry_fee['infant']."円です".PHP_EOL;
-    }elseif($humanage <=12){
+    }elseif($human->age <=12){
       echo $human->name."さんの入場料金は".$this->entry_fee['children']."円です".PHP_EOL;
     }elseif($human->age <=64){
       echo $human->name."さんの入場料金は".$this->entry_fee['adulut']."円です".PHP_EOL;
@@ -352,20 +352,23 @@ echo PHP_EOL;
 print("#####q21#####".PHP_EOL);
 
 for($i=1;$i<31;$i++){
-  if($i%3 == 0 && $i%5 == 0){
+  if($i%3 == 0 && $i%5 == 0 && $i%7 == 0 ){
+    echo "FizzBuzzHoge";
+    echo PHP_EOL;
+  }elseif($i%3 == 0 && $i%5 == 0){
     echo "FizzBuzz";
     echo PHP_EOL;
   }elseif($i%3 ==0 && $i%7 == 0){
     echo "FizzHoge";
     echo PHP_EOL;
-  }elseif($i%3 ==0){
-    echo "Fizz";
+  }elseif($i%7 ==0){
+    echo "Hoge";
     echo PHP_EOL;
   }elseif($i%5 ==0){
     echo "Buzz";
     echo PHP_EOL;
-  }elseif($i%7 ==0){
-    echo "Hoge";
+  }elseif($i%3 ==0){
+    echo "Fizz";
     echo PHP_EOL;
   }else{
     echo $i;
