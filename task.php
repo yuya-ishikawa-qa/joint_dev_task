@@ -327,9 +327,9 @@ class Zoo
     }elseif($human->age <=12){
       echo $human->name."さんの入場料金は".$this->entry_fee['children']."円です".PHP_EOL;
     }elseif($human->age <=64){
-      echo $human->name."さんの入場料金は".$this->entry_fee['adulut']."円です".PHP_EOL;
+      echo $human->name."さんの入場料金は".$this->entry_fee['adult']."円です".PHP_EOL;
     }elseif($human->age <=120){
-    echo $human->name."さんの入場料金は".$this->entry_fee['senior']."円です".PHP_EOL;
+      echo $human->name."さんの入場料金は".$this->entry_fee['senior']."円です".PHP_EOL;
     }
   }
 }
@@ -355,11 +355,14 @@ for($i=1;$i<31;$i++){
   if($i%3 == 0 && $i%5 == 0 && $i%7 == 0 ){
     echo "FizzBuzzHoge";
     echo PHP_EOL;
-  }elseif($i%3 == 0 && $i%5 == 0){
-    echo "FizzBuzz";
+  }elseif($i%5 ==0 && $i%7 == 0){
+    echo "BuzzHoge";
     echo PHP_EOL;
   }elseif($i%3 ==0 && $i%7 == 0){
     echo "FizzHoge";
+    echo PHP_EOL;
+  }elseif($i%3 == 0 && $i%5 == 0){
+    echo "FizzBuzz";
     echo PHP_EOL;
   }elseif($i%7 ==0){
     echo "Hoge";
