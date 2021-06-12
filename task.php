@@ -226,3 +226,19 @@ if (array_key_exists('age',$data2)) {
   print('NG' .PHP_EOL);
 }
 echo PHP_EOL;
+
+print("#####q16#####".PHP_EOL);
+
+$users = [
+  ["name" => "satou", "age" => 22],
+  ["name" => "yamada", "age" => 12],
+  ["name" => "takahashi", "age" => 32],
+  ["name" => "nakamura", "age" => 41]
+  ];
+  
+  foreach($users as $key => $user){
+    print "私の名前は".$user["name"]."です。年齢は".$user["age"]."歳です。".PHP_EOL;
+  }
+  echo PHP_EOL;
+  
+
